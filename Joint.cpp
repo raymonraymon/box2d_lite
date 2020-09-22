@@ -93,6 +93,7 @@ void Joint::PreStep(float inv_dt)
 
 void Joint::ApplyImpulse()
 {
+	//如果没有warm starting，这个dv会比较大。先用累加的冲量计算一个近似值，然后把这个 近似值和真实值之间的差用冲量法去掉。
     Vec2 dv = body2->velocity + Cross(body2->angularVelocity, r2) - body1->velocity - Cross(body1->angularVelocity, r1);
 
 	Vec2 impulse;

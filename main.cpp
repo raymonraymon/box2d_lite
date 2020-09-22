@@ -596,7 +596,7 @@ void Reshape(int width, int height)
 
 int main(int argc, char** argv)
 {
-	InitDemo(0);
+	InitDemo(1);
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
